@@ -278,10 +278,11 @@ h4 {
       display: none; } }
 
 .site-nav__home {
-  float: left; }
+  float: left;
+  width: 1%; }
 
 .site-nav__logo {
-  vertical-align: middle;
+  vertical-align: top;
   height: 2rem;
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg); }
@@ -344,8 +345,7 @@ h4 {
 
 .site-nav__item {
   display: block;
-  padding: .5rem;
-  text-transform: uppercase; }
+  padding: .5rem; }
   @media screen and (min-width: 700px) {
     .site-nav__item {
       float: left;
@@ -358,7 +358,8 @@ h4 {
   font-size: 2rem;
   font-weight: 900;
   text-decoration: none;
-  display: block; }
+  display: block;
+  text-transform: uppercase; }
   @media screen and (min-width: 700px) {
     .site-nav__link {
       color: rgba(0, 0, 0, 0.75);
