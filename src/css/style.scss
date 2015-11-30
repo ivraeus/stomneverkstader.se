@@ -124,6 +124,7 @@ $break-large:   1300px;
 $hero-fade-opacity: .8;
 $hero-noise-opacity: .6;
 $hero-image:        url('../img/bg.jpg');
+$hero-image-ie:     url('../img/bg-ie.jpg');
 $hero-fade-from:    rgba(37, 161, 195, $hero-fade-opacity);
 $hero-fade-to:      rgba(32, 89, 24, $hero-fade-opacity);
 
@@ -352,16 +353,6 @@ h4 {
   padding-top: 4vw;
   position: relative;
 
-  // background-image: url("images/overlay2.png"), url("images/overlay3.svg"), linear-gradient(45deg, #9dc66b 5%, #4fa49a 30%, #4361c2);
-  // background-position: top left,  center center,  center center;
-  // background-size: auto,  cover,  cover;
-
-  // background-image: url("images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), $hero-image;
-  // background-repeat: repeat,  no-repeat,  no-repeat;
-  // background-size: 100px 100px, cover, cover;
-  // background-position: top left,  center center,  bottom center;
-  // background-attachment: fixed, fixed, fixed;
-
   @media screen and (min-width: $break-small) {
     font-size: 1rem;
   }
@@ -386,7 +377,11 @@ h4 {
   }
 }
 
-
+.ie9 .page-head--masterhead {
+  // IE9 CODE HERE
+   background: $hero-image-ie no-repeat center center;
+   background-size: cover;
+}
 
 
 
@@ -413,7 +408,7 @@ h4 {
 
   .site-nav__home {
     float: left;
-    width: 1%; // fix wierd padding in edge
+    width:100px; // fix weird padding in edge
   }
 
   .site-nav__logo {
@@ -588,6 +583,10 @@ h4 {
       display: block;
       height: 100%;
     }
+  }
+
+  .ie9 .section__image {
+    margin-bottom: 20%;
   }
 
     .section__image--no-mobile {

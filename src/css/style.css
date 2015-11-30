@@ -260,6 +260,10 @@ h4 {
     top: 0;
     width: 100%; }
 
+.ie9 .page-head--masterhead {
+  background: url("../img/bg-ie.jpg") no-repeat center center;
+  background-size: cover; }
+
 .site-nav {
   line-height: 2rem;
   overflow: hidden;
@@ -279,7 +283,7 @@ h4 {
 
 .site-nav__home {
   float: left;
-  width: 1%; }
+  width: 100px; }
 
 .site-nav__logo {
   vertical-align: top;
@@ -418,6 +422,9 @@ h4 {
   .section__image img {
     display: block;
     height: 100%; }
+
+.ie9 .section__image {
+  margin-bottom: 20%; }
 
 .section__image--no-mobile {
   display: none; }
