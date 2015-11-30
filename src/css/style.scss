@@ -230,10 +230,18 @@ h2 {
 
 h3,
 h4 {
-  font-weight: 600;
+  font-weight: 400;
+
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
 
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 
 .wrapper {
@@ -336,9 +344,14 @@ h4 {
     text-decoration: none;
     font-weight: 500;
 
-      @media screen and (min-width: $break-medium) {
-        font-size: 1rem;
-      }
+    @media screen and (max-width: $break-small) {
+      display: block;
+      margin-top: 0.4rem;
+    }
+
+    @media screen and (min-width: $break-medium) {
+      font-size: 1rem;
+    }
   }
 
 
@@ -408,7 +421,7 @@ h4 {
 
   .site-nav__home {
     float: left;
-    width:100px; // fix weird padding in edge
+    width:2rem; // fix weird padding in edge
   }
 
   .site-nav__logo {
@@ -430,6 +443,7 @@ h4 {
 
     .site-nav__anchor--open,
     .site-nav__anchor--close {
+      pointer-events: auto;
       padding: 0;
       margin: 0;
       height: 1.9rem;
@@ -452,6 +466,7 @@ h4 {
     }
 
   .site-nav__list {
+    pointer-events: none;
     background-color: $nav-popup-back-color;
     bottom: 0;
     left: 0;
@@ -498,6 +513,7 @@ h4 {
   }
 
   .site-nav__link {
+    pointer-events: auto;
     color: $nav-popup-text-color;
     font-family: 'Source Sans Pro';
     font-size: 2rem;

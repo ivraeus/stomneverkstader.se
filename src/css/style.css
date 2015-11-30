@@ -155,7 +155,13 @@ h2 {
 
 h3,
 h4 {
-  font-weight: 600; }
+  font-weight: 400; }
+
+a {
+  color: inherit;
+  text-decoration: inherit; }
+  a:hover {
+    text-decoration: underline; }
 
 .wrapper {
   margin-left: auto;
@@ -227,6 +233,10 @@ h4 {
   color: #fff;
   text-decoration: none;
   font-weight: 500; }
+  @media screen and (max-width: 320px) {
+    .page-head__contact-item {
+      display: block;
+      margin-top: 0.4rem; } }
   @media screen and (min-width: 700px) {
     .page-head__contact-item {
       font-size: 1rem; } }
@@ -283,7 +293,7 @@ h4 {
 
 .site-nav__home {
   float: left;
-  width: 100px; }
+  width: 2rem; }
 
 .site-nav__logo {
   vertical-align: top;
@@ -300,6 +310,7 @@ h4 {
 
 .site-nav__anchor--open,
 .site-nav__anchor--close {
+  pointer-events: auto;
   padding: 0;
   margin: 0;
   height: 1.9rem;
@@ -318,6 +329,7 @@ h4 {
   background: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%220%22%20y%3D%220%22%20viewBox%3D%220%200%20476.7%20476.7%22%20xml%3Aspace%3D%22preserve%22%3E%3Cpath%20d%3D%22M238.4%200C106.7%200%200%20106.7%200%20238.4c0%20131.7%20106.7%20238.4%20238.4%20238.4%20131.7%200%20238.4-106.7%20238.4-238.4C476.7%20106.7%20370%200%20238.4%200zM365.5%20349.6h-254.3c-8.8%200-15.9-7.2-15.9-15.9%200-8.7%207.1-15.9%2015.9-15.9h254.3c8.7%200%2015.9%207.2%2015.9%2015.9C381.4%20342.5%20374.2%20349.6%20365.5%20349.6zM365.5%20254.3h-254.3c-8.8%200-15.9-7.2-15.9-15.9%200-8.8%207.1-15.9%2015.9-15.9h254.3c8.7%200%2015.9%207.1%2015.9%2015.9C381.4%20247.1%20374.2%20254.3%20365.5%20254.3zM365.5%20158.9h-254.3c-8.8%200-15.9-7.1-15.9-15.9%200-8.8%207.1-15.9%2015.9-15.9h254.3c8.7%200%2015.9%207.1%2015.9%2015.9C381.4%20151.8%20374.2%20158.9%20365.5%20158.9z%22%20fill%3D%22%23BD402F%22/%3E%3C/svg%3E); }
 
 .site-nav__list {
+  pointer-events: none;
   background-color: #bd402f;
   bottom: 0;
   left: 0;
@@ -357,6 +369,7 @@ h4 {
       padding: 0; } }
 
 .site-nav__link {
+  pointer-events: auto;
   color: #fff;
   font-family: 'Source Sans Pro';
   font-size: 2rem;
